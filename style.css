@@ -1,0 +1,39 @@
+:root {
+    --background: #202020;
+    --output-box: #404040;
+    --text-color: #ffffff;
+}
+
+.center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.center-column {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+    margin-top: 20px;
+}
+
+#output-box {
+    background-color: var(--output-box);
+    font-size: 15px;
+    height: 70px;
+    line-height: 20px;
+    width: 600px;
+}
