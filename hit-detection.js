@@ -19,13 +19,13 @@ class Shape {
         this.color = color;
     }
 
-    move(newPosition) {
+    move = (newPosition) => {
         this.position = newPosition;
     }
 
-    draw() { }
+    draw = () => { }
 
-    outputText() {
+    outputText = () => {
         return roundToNDecimals(this.position.x, outputDecimalCount) + " "
             + roundToNDecimals(this.position.y, outputDecimalCount);
     }
@@ -37,17 +37,17 @@ class Circle extends Shape {
         this.radius = radius;
     }
 
-    draw() {
+    draw = () => {
         noStroke(); fill(this.color);
         circle(this.position.x, this.position.y, this.radius * 2);
     }
 
-    changeRadius(amount) {
+    changeRadius = (amount) => {
         this.radius -= amount;
         if (this.radius - amount < 3) this.radius = 3;
     }
 
-    outputText() {
+    outputText = () => {
         return roundToNDecimals(this.position.x, outputDecimalCount) + " "
             + roundToNDecimals(this.position.y, outputDecimalCount) + " " + roundToNDecimals(this.radius, outputDecimalCount);
     }
@@ -59,7 +59,7 @@ class Point extends Shape {
         this.size = size;
     }
 
-    draw() {
+    draw = () => {
         stroke(this.color); strokeWeight(this.size);
         point(this.position.x, this.position.y);
     }
